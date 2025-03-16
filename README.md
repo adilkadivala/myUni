@@ -1,4 +1,4 @@
-Thought for 3 seconds### MyUni: Analysis and Design Document
+## MyUni: Analysis and Design Document
 
 ## 1. System Analysis
 
@@ -20,40 +20,30 @@ The MyUni project aims to address the limitations of existing university applica
 | Poor Data Integration | Limited connection to university systems | Manual data entry and synchronization issues
 
 
-### 1.3 Stakeholder Analysis
 
-| Stakeholder | Needs | Pain Points | Expectations
-|-----|-----|-----
-| Students | Access to academic information, schedules, announcements | Outdated information, fragmented systems | User-friendly interface, real-time updates, personalized content
-| Faculty | Course management, student communication | Administrative burden, limited tools | Streamlined workflows, content management capabilities
-| University Administrators | Platform customization, content management | Technical limitations, resource constraints | Intuitive admin panel, branding options, analytics
-| IT Departments | System maintenance, integration | Complex infrastructure, security concerns | Well-documented code, scalable architecture, security features
-| Other Universities | Platform adoption and customization | Development costs, technical expertise | Easy implementation, customization options, shared resources
+## **1.3 Stakeholder Analysis**
+
+| Stakeholder           | Needs                                     | Pain Points                              | Expectations                                 |
+|-----------------------|------------------------------------------|------------------------------------------|---------------------------------------------|
+| Students             | Access to academic information, schedules, announcements | Outdated information, fragmented systems | User-friendly interface, real-time updates, personalized content |
+| Faculty              | Course management, student communication  | Administrative burden, limited tools    | Streamlined workflows, content management capabilities |
+| University Administrators | Platform customization, content management | Technical limitations, resource constraints | Intuitive admin panel, branding options, analytics |
+| IT Departments       | System maintenance, integration          | Complex infrastructure, security concerns | Well-documented code, scalable architecture, security features |
+| Other Universities   | Platform adoption and customization      | Development costs, technical expertise  | Easy implementation, customization options, shared resources |
+
 
 
 ## 2. Feasibility Study
 
 ### 2.1 Technical Feasibility
 
-**Technology Stack Assessment:**
-
-| Component | Technology | Feasibility | Justification
-|-----|-----|-----
-| Frontend | React.js, TypeScript | High | Mature ecosystem, component-based architecture ideal for modular design
-| Backend | Express.js | High | Lightweight, flexible framework suitable for microservices
-| Database | MySQL | High | Robust relational database with strong community support
-| Deployment | Docker | High | Containerization simplifies deployment across different environments
-| Optional | Next.js | Medium-High | Provides SSR capabilities but adds complexity
-
-
-**Technical Risks and Mitigations:**
-
-| Risk | Probability | Impact | Mitigation
-|-----|-----|-----
-| Integration complexity with university systems | High | High | Develop standardized API adapters and comprehensive documentation
-| Performance issues with real-time updates | Medium | High | Implement efficient caching and WebSocket connections
-| Security vulnerabilities | Medium | Critical | Regular security audits and OWASP compliance
-| Cross-browser compatibility | Medium | Medium | Comprehensive testing and progressive enhancement
+| Component  | Technology  | Feasibility  | Justification  |
+|-----------|------------|--------------|---------------|
+| Frontend  | React.js, TypeScript | High | Mature ecosystem, component-based architecture ideal for modular design |
+| Backend   | Express.js  | High | Lightweight, flexible framework suitable for microservices |
+| Database  | MySQL  | High | Robust relational database with strong community support |
+| Deployment | Docker  | High | Containerization simplifies deployment across different environments |
+| Optional  | Next.js  | Medium-High | Provides SSR capabilities but adds complexity |
 
 
 ### 2.2 Operational Feasibility
@@ -211,34 +201,38 @@ graph TD
 
 ### 4.1 Student User Stories
 
-| ID | User Story | Acceptance Criteria | Priority
-|-----|-----|-----
-| S1 | As a student, I want to view my class schedule so that I can plan my day. | - Schedule displays all enrolled courses`<br>`- Shows time, location, and instructor`<br>`- Allows filtering by day/week`<br>`- Sends reminders for upcoming classes | High
-| S2 | As a student, I want to receive real-time announcements so that I stay informed about important events. | - Notifications appear for new announcements`<br>`- Announcements are categorized by type`<br>`- Can mark announcements as read`<br>`- Can filter by department/course | High
-| S3 | As a student, I want to access my academic records so that I can track my progress. | - Shows current GPA and credits`<br>`- Lists all courses with grades`<br>`- Displays degree requirements progress`<br>`- Allows downloading unofficial transcript | High
-| S4 | As a student, I want to customize my homepage so that I can prioritize relevant information. | - Can add/remove/rearrange widgets`<br>`- Settings persist between sessions`<br>`- Provides default layout for new users`<br>`- Supports different widget sizes | Medium
-| S5 | As a student, I want to receive deadline reminders so that I don't miss important submissions. | - Shows upcoming assignments with due dates`<br>`- Sends notifications before deadlines`<br>`- Allows setting custom reminder times`<br>`- Integrates with calendar applications | Medium
+### 4.1 Student User Stories
+
+| ID  | User Story | Acceptance Criteria | Priority |
+|-----|-----------|---------------------|----------|
+| S1  | As a student, I want to view my class schedule so that I can plan my day. | - Schedule displays all enrolled courses <br> - Shows time, location, and instructor <br> - Allows filtering by day/week <br> - Sends reminders for upcoming classes | High |
+| S2  | As a student, I want to receive real-time announcements so that I stay informed about important events. | - Notifications appear for new announcements <br> - Announcements are categorized by type <br> - Can mark announcements as read <br> - Can filter by department/course | High |
+| S3  | As a student, I want to access my academic records so that I can track my progress. | - Shows current GPA and credits <br> - Lists all courses with grades <br> - Displays degree requirements progress <br> - Allows downloading unofficial transcript | High |
+| S4  | As a student, I want to customize my homepage so that I can prioritize relevant information. | - Can add/remove/rearrange widgets <br> - Settings persist between sessions <br> - Provides default layout for new users <br> - Supports different widget sizes | Medium |
+| S5  | As a student, I want to receive deadline reminders so that I don't miss important submissions. | - Shows upcoming assignments with due dates <br> - Sends notifications before deadlines <br> - Allows setting custom reminder times <br> - Integrates with calendar applications | Medium |
+
 
 
 ### 4.2 Faculty User Stories
 
-| ID | User Story | Acceptance Criteria | Priority
-|-----|-----|-----
-| F1 | As a faculty member, I want to post announcements so that I can communicate with my students. | - Can create, edit, and delete announcements`<br>`- Can target specific courses or departments`<br>`- Can schedule future publication`<br>`- Can attach files to announcements | High
-| F2 | As a faculty member, I want to view my teaching schedule so that I can prepare for classes. | - Shows all assigned courses`<br>`- Displays classroom locations and times`<br>`- Indicates number of enrolled students`<br>`- Allows adding personal notes | High
-| F3 | As a faculty member, I want to access student information so that I can track attendance and performance. | - Lists students enrolled in each course`<br>`- Shows student contact information`<br>`- Displays academic standing`<br>`- Respects privacy regulations | Medium
-| F4 | As a faculty member, I want to upload course materials so that students can access them easily. | - Supports various file formats`<br>`- Allows organizing materials by topic`<br>`- Tracks student access statistics`<br>`- Enables version control of materials | Medium
+| ID | User Story | Acceptance Criteria | Priority |
+|----|-----------|--------------------|----------|
+| F1 | As a faculty member, I want to post announcements so that I can communicate with my students. | - Can create, edit, and delete announcements <br> - Can target specific courses or departments <br> - Can schedule future publication <br> - Can attach files to announcements | High |
+| F2 | As a faculty member, I want to view my teaching schedule so that I can prepare for classes. | - Shows all assigned courses <br> - Displays classroom locations and times <br> - Indicates number of enrolled students <br> - Allows adding personal notes | High |
+| F3 | As a faculty member, I want to access student information so that I can track attendance and performance. | - Lists students enrolled in each course <br> - Shows student contact information <br> - Displays academic standing <br> - Respects privacy regulations | Medium |
+| F4 | As a faculty member, I want to upload course materials so that students can access them easily. | - Supports various file formats <br> - Allows organizing materials by topic <br> - Tracks student access statistics <br> - Enables version control of materials | Medium |
 
 
 ### 4.3 Administrator User Stories
 
-| ID | User Story | Acceptance Criteria | Priority
-|-----|-----|-----
-| A1 | As an administrator, I want to customize the university's app interface so that it aligns with our branding. | - Can upload university logo`<br>`- Can set primary and secondary colors`<br>`- Can customize homepage layout`<br>`- Changes apply across all user interfaces | High
-| A2 | As an administrator, I want to manage user permissions so that appropriate access is granted. | - Can create and modify user roles`<br>`- Can assign roles to users`<br>`- Can define granular permissions`<br>`- Changes take effect immediately | High
-| A3 | As an administrator, I want to publish university-wide announcements so that all users are informed. | - Can target specific user groups`<br>`- Can set announcement priority`<br>`- Can schedule and expire announcements`<br>`- Can track read receipts | Medium
-| A4 | As an administrator, I want to configure data integration points so that information is accurate and up-to-date. | - Can set up API connections`<br>`- Can schedule synchronization intervals`<br>`- Can map external data to system fields`<br>`- Can monitor synchronization status | High
-| A5 | As an administrator, I want to view usage analytics so that I can optimize the platform. | - Shows active users and peak times`<br>`- Displays feature usage statistics`<br>`- Reports on system performance`<br>`- Allows exporting data for analysis | Low
+| ID | User Story | Acceptance Criteria | Priority |
+|----|-----------|--------------------|----------|
+| A1 | As an administrator, I want to customize the university's app interface so that it aligns with our branding. | - Can upload university logo <br> - Can set primary and secondary colors <br> - Can customize homepage layout <br> - Changes apply across all user interfaces | High |
+| A2 | As an administrator, I want to manage user permissions so that appropriate access is granted. | - Can create and modify user roles <br> - Can assign roles to users <br> - Can define granular permissions <br> - Changes take effect immediately | High |
+| A3 | As an administrator, I want to publish university-wide announcements so that all users are informed. | - Can target specific user groups <br> - Can set announcement priority <br> - Can schedule and expire announcements <br> - Can track read receipts | Medium |
+| A4 | As an administrator, I want to configure data integration points so that information is accurate and up-to-date. | - Can set up API connections <br> - Can schedule synchronization intervals <br> - Can map external data to system fields <br> - Can monitor synchronization status | High |
+| A5 | As an administrator, I want to view usage analytics so that I can optimize the platform. | - Shows active users and peak times <br> - Displays feature usage statistics <br> - Reports on system performance <br> - Allows exporting data for analysis | Low |
+
 
 
 ## 5. EPICS
@@ -365,41 +359,41 @@ graph TD
 
 ### High Priority Items
 
-| ID | Item | Description | Effort Estimate | Dependencies
-|-----|-----|-----
-| H1 | TypeScript Rewrite | Rewrite existing codebase in TypeScript for improved maintainability | 4 weeks | None
-| H2 | Authentication System | Implement secure login and user management | 3 weeks | H1
-| H3 | Core Backend Architecture | Develop scalable microservices foundation | 4 weeks | H1
-| H4 | Basic CMS Functionality | Create essential content management capabilities | 3 weeks | H1, H3
-| H5 | Data Integration Framework | Build system for connecting to university data sources | 3 weeks | H3
-| H6 | Student Dashboard | Implement primary student interface | 2 weeks | H2, H4
-| H7 | Admin Panel Core | Develop basic administration interface | 2 weeks | H2, H4
+| ID  | Item                     | Description                                    | Effort Estimate | Dependencies |
+|-----|--------------------------|------------------------------------------------|----------------|--------------|
+| H1  | TypeScript Rewrite       | Rewrite existing codebase in TypeScript       | 4 weeks        | None         |
+| H2  | Authentication System    | Implement secure login and user management    | 3 weeks        | H1           |
+| H3  | Core Backend Architecture | Develop scalable microservices foundation     | 4 weeks        | H1           |
+| H4  | Basic CMS Functionality  | Create essential content management capabilities | 3 weeks    | H1, H3       |
+| H5  | Data Integration Framework | Build system for connecting to university data sources | 3 weeks | H3 |
+| H6  | Student Dashboard        | Implement primary student interface           | 2 weeks        | H2, H4       |
+| H7  | Admin Panel Core         | Develop basic administration interface        | 2 weeks        | H2, H4       |
 
 
 ### Medium Priority Items
 
-| ID | Item | Description | Effort Estimate | Dependencies
-|-----|-----|-----
-| M1 | Personalized Homepage | Implement customizable dashboard | 2 weeks | H6
-| M2 | Advanced Admin Features | Extend admin panel with additional capabilities | 3 weeks | H7
-| M3 | Student Portal | Develop academic records and course management | 3 weeks | H5, H6
-| M4 | Multi-Domain Support | Enable multiple university instances | 3 weeks | H3, H7
-| M5 | Notification System | Implement real-time alerts and messages | 2 weeks | H2, H3
-| M6 | Mobile Optimization | Ensure responsive design for all devices | 2 weeks | H6, M1
-| M7 | Content Workflow | Add approval processes for content publication | 2 weeks | H4
+| ID  | Item                     | Description                                    | Effort Estimate | Dependencies |
+|-----|--------------------------|------------------------------------------------|----------------|--------------|
+| M1  | Personalized Homepage    | Implement customizable dashboard               | 2 weeks        | H6           |
+| M2  | Advanced Admin Features  | Extend admin panel with additional capabilities | 3 weeks     | H7           |
+| M3  | Student Portal           | Develop academic records and course management | 3 weeks     | H5, H6       |
+| M4  | Multi-Domain Support     | Enable multiple university instances          | 3 weeks        | H3, H7       |
+| M5  | Notification System      | Implement real-time alerts and messages       | 2 weeks        | H2, H3       |
+| M6  | Mobile Optimization      | Ensure responsive design for all devices      | 2 weeks        | H6, M1       |
+| M7  | Content Workflow         | Add approval processes for content publication | 2 weeks    | H4           |
 
 
 ### Low Priority Items
 
-| ID | Item | Description | Effort Estimate | Dependencies
-|-----|-----|-----
-| L1 | Advanced Analytics | Implement usage tracking and reporting | 3 weeks | H3, H7
-| L2 | Mobile App Optimization | Enhance mobile experience beyond responsive design | 3 weeks | M6
-| L3 | Additional Service Integrations | Connect to library, LMS, and other systems | 4 weeks | H5
-| L4 | Advanced Customization | Implement theming engine and extended branding | 3 weeks | M4
-| L5 | Community Contribution Framework | Create system for external developers | 2 weeks | H1, H3
-| L6 | Performance Optimization | Enhance system speed and efficiency | 2 weeks | All high priority
-| L7 | Internationalization | Add multi-language support | 2 weeks | H4, H6, H7
+| ID  | Item                      | Description                                   | Effort Estimate | Dependencies |
+|-----|---------------------------|-----------------------------------------------|----------------|--------------|
+| L1  | Advanced Analytics        | Implement usage tracking and reporting       | 3 weeks        | H3, H7       |
+| L2  | Mobile App Optimization   | Enhance mobile experience beyond responsive design | 3 weeks | M6 |
+| L3  | Additional Service Integrations | Connect to library, LMS, and other systems | 4 weeks | H5 |
+| L4  | Advanced Customization    | Implement theming engine and extended branding | 3 weeks  | M4           |
+| L5  | Community Contribution Framework | Create system for external developers | 2 weeks  | H1, H3       |
+| L6  | Performance Optimization  | Enhance system speed and efficiency          | 2 weeks        | All high priority |
+| L7  | Internationalization      | Add multi-language support                   | 2 weeks        | H4, H6, H7   |
 
 
 ## 7. Requirements Analysis
