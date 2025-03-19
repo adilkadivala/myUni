@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Lexend } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme-provider";
-import { ClerkProvider } from "@clerk/nextjs";
-
 
 const primary = Poppins({
   weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
@@ -18,8 +15,8 @@ const secondry = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "postier",
-  description: "Auto-",
+  title: "MyUni",
+  description: "system analysis and design",
 };
 
 export default function RootLayout({
@@ -28,23 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <head>
-          <title>Postier</title>
-          <link
-            rel="icon"
-            href="./favicon.svg"
-            type="image/<generated>"
-            sizes="<generated>"
-          />
-        </head>
-        <body
-          className={`${primary.className} ${secondry.variable} antialiased`}
-        >
-          <ThemeProvider>{children}</ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${primary.className} ${secondry.variable} antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 }
