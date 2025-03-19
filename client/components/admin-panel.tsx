@@ -137,7 +137,7 @@ function AdminPanel() {
             <CardHeader>
               <CardTitle>University Customization</CardTitle>
               <CardDescription>
-                Configure the appearance and features of your university's
+                Configure the appearance and features of your university&rsquo;s
                 application
               </CardDescription>
             </CardHeader>

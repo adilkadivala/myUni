@@ -53,7 +53,7 @@ function LoginScreen() {
 
             <div className="mt-6 pt-6 border-t text-center">
               <p className="text-sm text-muted-foreground">
-                Don't have an account? Contact your university administrator.
+                Don&rsquo;t have an account? Contact your university administrator.
               </p>
             </div>
           </CardContent>

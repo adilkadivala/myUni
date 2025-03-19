@@ -149,7 +149,7 @@ function StudentDashboard() {
             {/* Upcoming Classes */}
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Today's Classes</CardTitle>
+                <CardTitle className="text-lg">Today&rsquo;s Classes</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
