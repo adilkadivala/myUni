@@ -2,15 +2,19 @@
 import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Bell, Book, Calendar, FileText, Home, Menu, MessageSquare, Settings, User, X } from "lucide-react";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+  Bell,
+  Book,
+  Calendar,
+  FileText,
+  Home,
+  Menu,
+  MessageSquare,
+  Settings,
+  User,
+  X,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function StudentDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

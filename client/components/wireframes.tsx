@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StudentDashboard from "@/components/student-dashboard";
 import StudentPortal from "@/components/student-portal";
 import AdminPanel from "@/components/admin-panel";
@@ -12,7 +12,9 @@ import LoginScreen from "@/components/login-screen";
 import SystemArchitecture from "@/components/system-architecture";
 
 export default function Wireframes() {
-  const [currentWireframe, setCurrentWireframe] = useState("student-dashboard");
+  const [currentWireframe, setCurrentWireframe] = useState(
+    "system-architecture"
+  );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -32,6 +34,20 @@ export default function Wireframes() {
         {mobileMenuOpen && (
           <div className="mt-2 border rounded-lg p-2 bg-background shadow-lg">
             <div className="flex flex-col space-y-1">
+              <Button
+                variant={
+                  currentWireframe === "system-architecture"
+                    ? "default"
+                    : "ghost"
+                }
+                className="justify-start"
+                onClick={() => {
+                  setCurrentWireframe("system-architecture");
+                  setMobileMenuOpen(false);
+                }}
+              >
+                System Architecture
+              </Button>
               <Button
                 variant={
                   currentWireframe === "student-dashboard" ? "default" : "ghost"
@@ -88,40 +104,26 @@ export default function Wireframes() {
               >
                 Login Screen
               </Button>
-              <Button
-                variant={
-                  currentWireframe === "system-architecture"
-                    ? "default"
-                    : "ghost"
-                }
-                className="justify-start"
-                onClick={() => {
-                  setCurrentWireframe("system-architecture");
-                  setMobileMenuOpen(false);
-                }}
-              >
-                System Architecture
-              </Button>
             </div>
           </div>
         )}
       </div>
 
       <Tabs
-        defaultValue="student-dashboard"
+        defaultValue="system-architecture"
         value={currentWireframe}
         onValueChange={setCurrentWireframe}
         className="w-full"
       >
         <TabsList className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+          <TabsTrigger value="system-architecture">
+            System Architecture
+          </TabsTrigger>
           <TabsTrigger value="student-dashboard">Student Dashboard</TabsTrigger>
           <TabsTrigger value="student-portal">Student Portal</TabsTrigger>
           <TabsTrigger value="admin-panel">Admin Panel</TabsTrigger>
           <TabsTrigger value="cms">CMS Interface</TabsTrigger>
           <TabsTrigger value="login">Login Screen</TabsTrigger>
-          <TabsTrigger value="system-architecture">
-            System Architecture
-          </TabsTrigger>
         </TabsList>
 
         <div
@@ -131,6 +133,10 @@ export default function Wireframes() {
               : "mt-6 border rounded-lg p-4 bg-gray-50 "
           }
         >
+          <TabsContent value="system-architecture">
+            <SystemArchitecture />
+          </TabsContent>
+
           <TabsContent value="student-dashboard">
             <StudentDashboard />
           </TabsContent>
@@ -149,10 +155,6 @@ export default function Wireframes() {
 
           <TabsContent value="login">
             <LoginScreen />
-          </TabsContent>
-
-          <TabsContent value="system-architecture">
-            <SystemArchitecture />
           </TabsContent>
         </div>
       </Tabs>
