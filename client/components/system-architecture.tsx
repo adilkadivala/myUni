@@ -24,10 +24,10 @@ function SystemArchitecture() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="border rounded-md p-2 text-center">Web App</div>
                 <div className="border rounded-md p-2 text-center">
-                  Mobile App
+                  student Dashboard
                 </div>
                 <div className="border rounded-md p-2 text-center">
-                  Admin Panel
+                  Admin Dashoard
                 </div>
               </div>
             </div>
@@ -37,9 +37,13 @@ function SystemArchitecture() {
               <div className="bg-purple-100 p-3 rounded-lg text-center font-medium mb-2">
                 API Gateway
               </div>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <div className="border rounded-md p-2 text-center">
-                  Authentication, Routing, Load Balancing
+                  Authentication
+                </div>
+                <div className="border rounded-md p-2 text-center">Routing</div>
+                <div className="border rounded-md p-2 text-center">
+                  Load Balancing
                 </div>
               </div>
             </div>
@@ -54,7 +58,7 @@ function SystemArchitecture() {
                   User Service
                 </div>
                 <div className="border rounded-md p-2 text-center text-sm">
-                  Content Service
+                  Content Management Service
                 </div>
                 <div className="border rounded-md p-2 text-center text-sm">
                   Academic Service
@@ -93,8 +97,8 @@ function SystemArchitecture() {
               <div className="border rounded-md p-4">
                 <h4 className="font-medium mb-2">Frontend Layer</h4>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>React.js with TypeScript for component-based UI</li>
-                  <li>Responsive design for multiple devices</li>
+                  <li>next.js with TypeScript for component-based UI</li>
+                  <li>Responsive design for multiple devices ex: dashboard, tab, Mobile</li>
                   <li>State management with React Context or Redux</li>
                   <li>Theme customization for university branding</li>
                 </ul>
@@ -107,6 +111,7 @@ function SystemArchitecture() {
                   <li>Authentication and authorization</li>
                   <li>Rate limiting and request throttling</li>
                   <li>Response caching for improved performance</li>
+                  <li>Load balancing</li>
                 </ul>
               </div>
 
@@ -132,6 +137,7 @@ function SystemArchitecture() {
                   <li>MySQL for structured data storage</li>
                   <li>Redis for caching and session management</li>
                   <li>File storage for documents and media</li>
+                  <li>NginX for load-balancing</li>
                   <li>Data replication and backup strategies</li>
                 </ul>
               </div>
@@ -140,7 +146,6 @@ function SystemArchitecture() {
                 <h4 className="font-medium mb-2">Infrastructure</h4>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Docker containers for service isolation</li>
-                  <li>Kubernetes for orchestration (optional)</li>
                   <li>CI/CD pipeline for automated deployment</li>
                   <li>Monitoring and logging infrastructure</li>
                 </ul>

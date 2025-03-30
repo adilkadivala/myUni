@@ -10,6 +10,7 @@ import AdminPanel from "@/components/admin-panel";
 import CMSInterface from "@/components/cms-interface";
 import LoginScreen from "@/components/login-screen";
 import SystemArchitecture from "@/components/system-architecture";
+import Landing from "./landing-page";
 
 export default function Wireframes() {
   const [currentWireframe, setCurrentWireframe] = useState(
@@ -115,10 +116,11 @@ export default function Wireframes() {
         onValueChange={setCurrentWireframe}
         className="w-full"
       >
-        <TabsList className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+        <TabsList className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-2">
           <TabsTrigger value="system-architecture">
             System Architecture
           </TabsTrigger>
+          <TabsTrigger value="landing-page">Landing Page</TabsTrigger>
           <TabsTrigger value="student-dashboard">Student Dashboard</TabsTrigger>
           <TabsTrigger value="student-portal">Student Portal</TabsTrigger>
           <TabsTrigger value="admin-panel">Admin Panel</TabsTrigger>
@@ -135,6 +137,10 @@ export default function Wireframes() {
         >
           <TabsContent value="system-architecture">
             <SystemArchitecture />
+          </TabsContent>
+
+          <TabsContent value="landing-page">
+            <Landing />
           </TabsContent>
 
           <TabsContent value="student-dashboard">
