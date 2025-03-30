@@ -21,7 +21,7 @@ function StudentDashboard() {
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center dark:text-zinc-700  ">
         <h2 className="text-xl md:text-2xl font-bold">Student Dashboard</h2>
         <Button
           variant="outline"
@@ -32,7 +32,7 @@ function StudentDashboard() {
           {sidebarOpen ? <X size={18} /> : <Menu size={18} />}
         </Button>
       </div>
-      <p className="text-muted-foreground mb-4">
+      <p className="text-muted-foreground mb-4 dark:text-zinc-700">
         Personalized homepage with customizable tiles and content
       </p>
 
@@ -40,14 +40,14 @@ function StudentDashboard() {
         {/* Mobile Sidebar (Overlay) */}
         {sidebarOpen && (
           <div
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            className="fixed inset-0 bg-black/50 z-40 md:hidden "
             onClick={() => setSidebarOpen(false)}
           >
             <div
-              className="w-64 h-full bg-white p-4"
+              className="w-64 h-full bg-white p-4 dark:text-zinc-700"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-6 dark:text-zinc-700">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
                   <User size={20} />
                 </div>
@@ -59,7 +59,7 @@ function StudentDashboard() {
                 </div>
               </div>
 
-              <nav className="space-y-1">
+              <nav className="space-y-1 ">
                 <Button variant="ghost" className="w-full justify-start gap-2">
                   <Home size={18} />
                   Dashboard
@@ -90,8 +90,8 @@ function StudentDashboard() {
         )}
 
         {/* Desktop Sidebar */}
-        <div className="hidden md:block w-64 bg-white p-4 rounded-lg shadow">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="hidden md:block w-64 bg-white p-4 rounded-lg shadow dark:text-zinc-700">
+          <div className="flex items-center gap-3 mb-6 ">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
               <User size={20} />
             </div>
@@ -132,7 +132,7 @@ function StudentDashboard() {
         {/* Main Content */}
         <div className="flex-1 space-y-4">
           {/* Header */}
-          <div className="bg-white p-4 rounded-lg shadow flex justify-between items-center">
+          <div className="bg-white p-4 rounded-lg shadow flex justify-between items-center dark:text-zinc-700">
             <h3 className="text-lg font-medium">Welcome back, Maria!</h3>
             <div className="flex items-center gap-3">
               <Button variant="outline" size="sm" className="hidden sm:flex">
@@ -147,7 +147,7 @@ function StudentDashboard() {
           {/* Grid Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Upcoming Classes */}
-            <Card>
+            <Card >
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg">Today&rsquo;s Classes</CardTitle>
               </CardHeader>

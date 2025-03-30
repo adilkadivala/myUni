@@ -30,7 +30,7 @@ function AdminPanel() {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl md:text-2xl font-bold">Admin Panel</h2>
+        <h2 className="text-xl md:text-2xl font-bold dark:text-zinc-700">Admin Panel</h2>
         <Button
           variant="outline"
           size="sm"
@@ -40,11 +40,11 @@ function AdminPanel() {
           {sidebarOpen ? <X size={18} /> : <Menu size={18} />}
         </Button>
       </div>
-      <p className="text-muted-foreground mb-4">
+      <p className="text-muted-foreground mb-4 dark:text-zinc-700">
         University customization and management interface
       </p>
 
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4 dark:text-zinc-700">
         {/* Mobile Sidebar (Overlay) */}
         {sidebarOpen && (
           <div
@@ -94,7 +94,7 @@ function AdminPanel() {
         )}
 
         {/* Desktop Sidebar */}
-        <div className="hidden md:block w-64 bg-white p-4 rounded-lg shadow">
+        <div className="hidden md:block w-64 bg-white p-4 rounded-lg shadow dark:text-zinc-700">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
               <User size={20} />

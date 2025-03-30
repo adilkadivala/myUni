@@ -45,11 +45,11 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section className="py-20 bg-muted/50" id="features">
+    <section className="py-20 bg-muted/20" id="features">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Platform Features</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-950">Comprehensive Platform Features</h2>
+          <p className="text-lg text-muted-foreground dark:text-zinc-700">
             MyUni provides a complete suite of tools to enhance your university experience, from academic management to
             campus engagement.
           </p>

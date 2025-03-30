@@ -13,13 +13,13 @@ import { Label } from "./ui/label";
 function LoginScreen() {
   return (
     <div className="space-y-4">
-      <h2 className="text-xl md:text-2xl font-bold">Login Screen</h2>
-      <p className="text-muted-foreground mb-4">
+      <h2 className="text-xl md:text-2xl font-bold dark:text-zinc-700">Login Screen</h2>
+      <p className="text-muted-foreground mb-4 dark:text-zinc-700">
         Authentication interface for university users
       </p>
 
       <div className="flex justify-center">
-        <Card className="w-full max-w-md">
+        <Card className="w-full max-w-md dark:text-zinc-700">
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center text-white mb-4">
               <User size={32} />

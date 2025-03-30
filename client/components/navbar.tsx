@@ -19,10 +19,10 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <div className="rounded-md bg-primary p-1 text-primary-foreground">
+            <div className="rounded-md bg-primary p-1 text-primary-foreground ">
               <span className="text-xl font-bold">M</span>
             </div>
-            <span className="text-xl font-bold">MyUni</span>
+            <span className="text-xl font-bold dark:text-zinc-700">MyUni</span>
           </Link>
         </div>
 
@@ -30,7 +30,7 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           <div className="relative">
             <button
-              className="flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors"
+              className="flex dark:text-zinc-700 items-center gap-1 text-foreground/70 hover:text-foreground transition-colors"
               onClick={() => toggleDropdown("about")}
             >
               About{" "}
@@ -42,31 +42,31 @@ export function Navbar() {
               />
             </button>
             {activeDropdown === "about" && (
-              <div className="absolute top-full mt-2 w-48 rounded-md bg-background shadow-lg border p-2">
+              <div className="absolute dark:text-zinc-700 top-full mt-2 w-48 rounded-md bg-background shadow-lg border p-2">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   Universities
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   History
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   Campus Life
                 </Link>
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative ">
             <button
-              className="flex items-center gap-1 text-foreground/70 hover:text-foreground transition-colors"
+              className="flex dark:text-zinc-700 items-center gap-1 text-foreground/70 hover:text-foreground transition-colors"
               onClick={() => toggleDropdown("academics")}
             >
               Academics{" "}
@@ -78,22 +78,22 @@ export function Navbar() {
               />
             </button>
             {activeDropdown === "academics" && (
-              <div className="absolute top-full mt-2 w-48 rounded-md bg-background shadow-lg border p-2">
+              <div className="absolute dark:text-zinc-700 top-full mt-2 w-48 rounded-md bg-background shadow-lg border p-2">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   Programs
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   Departments
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-muted rounded-md"
+                  className="block px-4 py-2 hover:bg-zinc-100 rounded-md"
                 >
                   Research
                 </Link>
@@ -102,26 +102,25 @@ export function Navbar() {
           </div>
           <Link
             href="#"
-            className="text-foreground/70 hover:text-foreground transition-colors"
+            className="text-foreground/70 dark:text-zinc-700 hover:text-foreground transition-colors"
           >
             Admissions
           </Link>
           <Link
             href="#"
-            className="text-foreground/70 hover:text-foreground transition-colors"
+            className="text-foreground/70 dark:text-zinc-700 hover:text-foreground transition-colors"
           >
             News
           </Link>
           <Link
             href="#"
-            className="text-foreground/70 hover:text-foreground transition-colors"
+            className="text-foreground/70 dark:text-zinc-700 hover:text-foreground transition-colors"
           >
             Contact
           </Link>
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
           <Button asChild className="hidden md:inline-flex">
             <Link href="/login">Student Portal</Link>
           </Button>
@@ -145,7 +144,7 @@ export function Navbar() {
                 className="flex items-center justify-between w-full py-2"
                 onClick={() => toggleDropdown("mobile-about")}
               >
-                <span>About</span>
+                <span className="dark:text-zinc-700">About</span>
                 <ChevronDown
                   size={16}
                   className={`transition-transform ${
@@ -155,13 +154,13 @@ export function Navbar() {
               </button>
               {activeDropdown === "mobile-about" && (
                 <div className="pl-4 space-y-2 mt-2">
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     Universities
                   </Link>
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     History
                   </Link>
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     Campus Life
                   </Link>
                 </div>
@@ -172,7 +171,7 @@ export function Navbar() {
                 className="flex items-center justify-between w-full py-2"
                 onClick={() => toggleDropdown("mobile-academics")}
               >
-                <span>Academics</span>
+                <span className="dark:text-zinc-700">Academics</span>
                 <ChevronDown
                   size={16}
                   className={`transition-transform ${
@@ -182,30 +181,30 @@ export function Navbar() {
               </button>
               {activeDropdown === "mobile-academics" && (
                 <div className="pl-4 space-y-2 mt-2">
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     Programs
                   </Link>
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     Departments
                   </Link>
-                  <Link href="#" className="block py-1">
+                  <Link href="#" className="block py-1 dark:text-zinc-700">
                     Research
                   </Link>
                 </div>
               )}
             </div>
             <div className="border-b pb-2">
-              <Link href="#" className="block py-2">
+              <Link href="#" className="block py-2 dark:text-zinc-700">
                 Admissions
               </Link>
             </div>
             <div className="border-b pb-2">
-              <Link href="#" className="block py-2">
+              <Link href="#" className="block py-2 dark:text-zinc-700">
                 News
               </Link>
             </div>
             <div className="border-b pb-2">
-              <Link href="#" className="block py-2">
+              <Link href="#" className="block py-2 dark:text-zinc-700">
                 Contact
               </Link>
             </div>

@@ -30,10 +30,10 @@ export function TestimonialsSection() {
     <section className="py-20 bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-950">
             What Our Community Says
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground dark:text-zinc-700">
             Hear from students and faculty about how MyUni has enhanced their
             university experience.
           </p>

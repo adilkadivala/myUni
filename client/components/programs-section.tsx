@@ -43,8 +43,8 @@ export function ProgramsSection() {
     <section className="py-20" id="explore">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Academic Programs</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-950">Academic Programs</h2>
+          <p className="text-lg text-muted-foreground dark:text-zinc-700">
             Discover our diverse range of undergraduate and graduate programs designed to prepare you for success in
             your chosen field.
           </p>
@@ -85,7 +85,7 @@ export function ProgramsSection() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center dark:text-zinc-700">
           <Button variant="outline" size="lg" asChild>
             <Link href="#">View All Programs</Link>
           </Button>

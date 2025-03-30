@@ -11,6 +11,7 @@ import CMSInterface from "@/components/cms-interface";
 import LoginScreen from "@/components/login-screen";
 import SystemArchitecture from "@/components/system-architecture";
 import Landing from "./landing-page";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Wireframes() {
   const [currentWireframe, setCurrentWireframe] = useState(
@@ -20,7 +21,12 @@ export default function Wireframes() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6">MyUni Wireframes</h1>
+      <div className="flex justify-between">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6">
+          MyUni Wireframes
+        </h1>
+        <ThemeToggle />
+      </div>
 
       <div className="md:hidden mb-4">
         <Button

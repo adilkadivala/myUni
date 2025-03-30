@@ -7,9 +7,9 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/5 dark:to-transparent"></div>
       <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 dark:text-zinc-700">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Welcome to <span className="text-primary">MyUni</span>
+              Welcome to <span className="text-primary dark:text-zinc-700/80">MyUni</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Empowering students with a modern, integrated university experience. Access courses, resources, and campus
