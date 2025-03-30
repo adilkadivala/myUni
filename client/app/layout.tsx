@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Lexend } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const primary = Poppins({
   weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${primary.className} ${secondry.variable} antialiased`}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
