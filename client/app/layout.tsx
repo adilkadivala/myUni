@@ -1,39 +1,40 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Poppins, Lexend } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/providers/theme-provider"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { AuthProvider } from "@/components/auth-provider";
+import { Toaster } from "@/components/ui/sonner";
 
-const primary = Poppins({
-  weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-})
-
-const secondry = Lexend({
-  variable: "--font-geist-mono",
-  subsets: ["latin", "vietnamese", "latin-ext"],
-})
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MyUni - Modern University Platform",
-  description: "Empowering students with a modern, integrated university experience",
-}
+  title: "MyUni - University Management System",
+  description:
+    "Complete university management system for students and administrators",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${primary.className} ${secondry.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+      <body className={inter.className}>
+        {/* <ThemeToggle
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange={false}
+          storageKey="myuni-theme"
+        > */}
+        {/* <AuthProvider> */}
+        {children}
+        <Toaster />
+        {/* </AuthProvider> */}
+        {/* </ThemeToggle> */}
       </body>
     </html>
-  )
+  );
 }
-

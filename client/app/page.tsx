@@ -1,11 +1,13 @@
-"use client";
-
-import Wireframes from "@/components/wireframes";
+import { HeroSection } from "@/components/hero-section";
+import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen">
-      <Wireframes />
+    <div>
+      {/* Header */}
+      <Navbar />
+      {/* Hero Section */}
+      <HeroSection />
     </div>
   );
 }
