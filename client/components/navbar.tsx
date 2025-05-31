@@ -43,10 +43,10 @@ export function Navbar() {
 
         <div className="flex items-center space-x-2">
           <ThemeToggle />
-          <Link href="/auth/signin">
+          <Link href="/auth/sign-in">
             <Button variant="ghost">Sign In</Button>
           </Link>
-          <Link href="/auth/signup">
+          <Link href="/auth/sign-up">
             <Button>Get Started</Button>
           </Link>
         </div>

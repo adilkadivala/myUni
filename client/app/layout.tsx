@@ -1,12 +1,17 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { AuthProvider } from "@/components/auth-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  style: "normal",
+  preload: true,
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "MyUni - University Management System",
@@ -21,19 +26,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        {/* <ThemeToggle
+      <body className={poppins.className}>
+        <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          enableSystem={false}
+          enableSystem={true}
           disableTransitionOnChange={false}
           storageKey="myuni-theme"
-        > */}
-        {/* <AuthProvider> */}
-        {children}
-        <Toaster />
-        {/* </AuthProvider> */}
-        {/* </ThemeToggle> */}
+        >
+          <AuthProvider>
+            {children}
+            <Toaster />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
