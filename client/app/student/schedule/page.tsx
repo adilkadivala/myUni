@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,8 +15,6 @@ import {
 } from "lucide-react";
 
 export default function SchedulePage() {
-  const [currentWeek, setCurrentWeek] = useState(new Date());
-
   const weeklySchedule = [
     {
       day: "Monday",
@@ -198,7 +195,6 @@ export default function SchedulePage() {
         <TabsList>
           <TabsTrigger value="weekly">Weekly View</TabsTrigger>
           <TabsTrigger value="upcoming">Upcoming Events</TabsTrigger>
-          <TabsTrigger value="calendar">Calendar View</TabsTrigger>
         </TabsList>
 
         <TabsContent value="weekly">

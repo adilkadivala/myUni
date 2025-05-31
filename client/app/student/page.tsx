@@ -180,7 +180,7 @@ export default function StudentDashboard() {
       </div>
 
       {/* Bottom Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Upcoming Deadlines */}
         <Card>
           <CardHeader>
@@ -247,33 +247,6 @@ export default function StudentDashboard() {
                 <span>Software Engineering</span>
                 <span className="font-medium text-green-600">8.8/10</span>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Quick Actions */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-2">
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <Book size={20} />
-                <span className="text-xs">Library</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <Calendar size={20} />
-                <span className="text-xs">Calendar</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <FileText size={20} />
-                <span className="text-xs">Transcript</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <User size={20} />
-                <span className="text-xs">Services</span>
-              </Button>
             </div>
           </CardContent>
         </Card>

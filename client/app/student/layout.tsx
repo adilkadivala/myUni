@@ -9,9 +9,6 @@ import {
   FileText,
   Calendar,
   GraduationCap,
-  CreditCard,
-  MessageSquare,
-  Bell,
   Settings,
   User,
 } from "lucide-react";
@@ -23,9 +20,6 @@ const navigation = [
   { name: "Schedule", href: "/student/schedule", icon: Calendar },
   { name: "Grades", href: "/student/grades", icon: GraduationCap },
   { name: "Registration", href: "/student/registration", icon: FileText },
-  { name: "Financial", href: "/student/financial", icon: CreditCard },
-  { name: "Messages", href: "/student/messages", icon: MessageSquare },
-  { name: "Notifications", href: "/student/notifications", icon: Bell },
   { name: "Records", href: "/student/records", icon: User },
   { name: "Settings", href: "/student/settings", icon: Settings },
 ];
@@ -41,7 +35,6 @@ export default function StudentLayout({
     ...item,
     current: pathname === item.href,
   }));
-
   return (
     <SidebarLayout navigation={navigationWithCurrent}>{children}</SidebarLayout>
   );
