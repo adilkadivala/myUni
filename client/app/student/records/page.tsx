@@ -133,7 +133,6 @@ export default function AcademicRecordsPage() {
         <TabsList>
           <TabsTrigger value="courses">Course History</TabsTrigger>
           <TabsTrigger value="gpa">GPA Trends</TabsTrigger>
-          <TabsTrigger value="transcript">Official Transcript</TabsTrigger>
         </TabsList>
 
         <TabsContent value="courses">

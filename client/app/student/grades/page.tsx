@@ -200,7 +200,6 @@ export default function GradesPage() {
         <TabsList>
           <TabsTrigger value="current">Current Semester</TabsTrigger>
           <TabsTrigger value="history">Grade History</TabsTrigger>
-          <TabsTrigger value="analytics">Performance Analytics</TabsTrigger>
         </TabsList>
 
         <TabsContent value="current">
