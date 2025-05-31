@@ -275,7 +275,6 @@ export default function UsersPage() {
           <TabsTrigger value="students">Students</TabsTrigger>
           <TabsTrigger value="faculty">Faculty</TabsTrigger>
           <TabsTrigger value="staff">Staff</TabsTrigger>
-          <TabsTrigger value="bulk-actions">Bulk Actions</TabsTrigger>
         </TabsList>
 
         <TabsContent value="students">
@@ -610,117 +609,6 @@ export default function UsersPage() {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="bulk-actions">
-          <Card>
-            <CardHeader>
-              <CardTitle>Bulk User Actions</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Import Users</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <p className="text-sm text-muted-foreground">
-                          Upload a CSV file to import multiple users at once
-                        </p>
-                        <div className="border-2 border-dashed rounded-md p-6 text-center">
-                          <p className="text-muted-foreground">
-                            Drop CSV file here or click to browse
-                          </p>
-                          <Button variant="outline" className="mt-2">
-                            Choose File
-                          </Button>
-                        </div>
-                        <Button className="w-full">Import Users</Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Export Users</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <p className="text-sm text-muted-foreground">
-                          Export user data for backup or analysis
-                        </p>
-                        <div className="space-y-2">
-                          <Button variant="outline" className="w-full">
-                            Export All Students
-                          </Button>
-                          <Button variant="outline" className="w-full">
-                            Export All Faculty
-                          </Button>
-                          <Button variant="outline" className="w-full">
-                            Export All Staff
-                          </Button>
-                          <Button className="w-full">Export All Users</Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">
-                      Bulk Status Updates
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <p className="text-sm text-muted-foreground">
-                        Update status for multiple users simultaneously
-                      </p>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select user type" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="students">Students</SelectItem>
-                            <SelectItem value="faculty">Faculty</SelectItem>
-                            <SelectItem value="staff">Staff</SelectItem>
-                          </SelectContent>
-                        </Select>
-
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Current status" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="active">Active</SelectItem>
-                            <SelectItem value="inactive">Inactive</SelectItem>
-                            <SelectItem value="probation">Probation</SelectItem>
-                          </SelectContent>
-                        </Select>
-
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="New status" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="active">Active</SelectItem>
-                            <SelectItem value="inactive">Inactive</SelectItem>
-                            <SelectItem value="probation">Probation</SelectItem>
-                            <SelectItem value="suspended">Suspended</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <Button>Apply Status Update</Button>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
             </CardContent>
           </Card>

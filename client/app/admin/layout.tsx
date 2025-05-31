@@ -10,10 +10,7 @@ import {
   Calendar,
   BookOpen,
   MessageSquare,
-  BarChart3,
   Settings,
-  Shield,
-  Palette,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -24,9 +21,6 @@ const navigation = [
   { name: "Content", href: "/admin/content", icon: FileText },
   { name: "Announcements", href: "/admin/announcements", icon: MessageSquare },
   { name: "Events", href: "/admin/events", icon: Calendar },
-  { name: "Analytics", href: "/admin/analytics", icon: BarChart3 },
-  { name: "Security", href: "/admin/security", icon: Shield },
-  { name: "Customization", href: "/admin/customization", icon: Palette },
   { name: "Settings", href: "/admin/settings", icon: Settings },
 ];
 
