@@ -76,7 +76,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       (pathname.startsWith("/admin") || pathname.startsWith("/student"))
     ) {
       // Redirect unauthenticated users to sign in
-      router.push("/auth/signin");
+      router.push("/auth/sign-in");
     }
   }, [user, pathname, isLoading, router]);
 

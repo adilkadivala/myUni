@@ -203,7 +203,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Bottom Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Pending Tasks */}
         <Card>
           <CardHeader>
@@ -261,33 +261,6 @@ export default function AdminDashboard() {
                 <span className="text-sm">System Alerts</span>
                 <span className="font-medium">3</span>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Quick Actions */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Quick Actions</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-2">
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <MessageSquare size={20} />
-                <span className="text-xs">New Announcement</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <Calendar size={20} />
-                <span className="text-xs">Add Event</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <Users size={20} />
-                <span className="text-xs">Manage Users</span>
-              </Button>
-              <Button variant="outline" className="h-auto py-3 flex-col gap-1">
-                <FileText size={20} />
-                <span className="text-xs">Reports</span>
-              </Button>
             </div>
           </CardContent>
         </Card>
